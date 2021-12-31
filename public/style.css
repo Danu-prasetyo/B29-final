@@ -1,0 +1,306 @@
+/*index.hbs style start*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  background: #f4f3f3;
+  height: 60px;
+  top: 0; /*top: 0; berfungsi agar navigasi menempati posisi paling atas.*/
+  position: fixed; /*position: fixed; berfungsi agar navigasi tetap di atas saat di scroll ke bawah.*/
+  width: 100%; /*width: 100%; berfungsi agar menu navigasinya memiliki lebar sepenuh di layar aplikasi browser.*/
+  z-index: 1; /*z-index: 1; berfungsi seperti layer di Photoshop, biar layer navigasi menempati posisi lapisan paling atas.*/
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
+}
+
+nav .left-side img {
+  height: 75px;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  flex: 50%;
+}
+
+nav div.left-side {
+  padding-left: 50px;
+}
+
+nav div.right-side {
+  padding-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-left: 40px;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 40px;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+nav ul li a.list-active {
+  color: #009ba0;
+  font-weight: 700;
+}
+
+/* a */
+nav .right-side a {
+  font-size: 15px;
+  padding: 8px 20px;
+  background-color: #009ba0;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+nav .right-side a[type="button"]:hover {
+  background-color: #007b80;
+}
+
+/*button*/
+nav .right-side button[type="button"] {
+  width: 20%;
+  font-size: 15px;
+  background-color: #009ba0;
+  color: white;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+nav .right-side button[type="button"]:hover {
+  background-color: #007b80;
+}
+
+/* Card Profile */
+
+.personal {
+  display: flex;
+  height: 93vh;
+  margin-top: 50px;
+  transition: all 0.7s linear;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.personal .left {
+  float: left;
+  flex: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card {
+  width: 450px;
+  border: 1px solid #00000033;
+  border-radius: 7px 50px;
+  padding: 15px 15px 25px 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card .image img {
+  width: 100%;
+  border-radius: 5px 40px;
+  margin: auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.card .header h1 {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.card .content p {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.card .content table {
+  width: 100%;
+  border: 1px solid rgb(116, 116, 116);
+  border-radius: 7px 20px;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.card .content table tr th {
+  font-weight: 600;
+  padding: 5px;
+}
+
+.card .content table tr td {
+  font-weight: 300;
+  padding: 5px;
+  text-align: center;
+}
+
+.personal .right {
+  float: right;
+  flex: 60%;
+  display: flex;
+  position: relative;
+}
+
+.personal .right div {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  right: 80px;
+}
+
+.personal .right div p {
+  text-align: justify;
+  color: #959595;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.personal .right .skill {
+  display: flex;
+}
+
+.personal .right .skill span {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.personal .right .skill img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.personal .right .skill p {
+  text-align: left;
+}
+
+.personal .right .findme {
+  position: absolute;
+  margin-top: 10px;
+}
+
+.personal .right .findme a {
+  cursor: pointer;
+  margin-right: 10px;
+  text-decoration: none; /*untuk menghilangkan garis bawah*/
+}
+
+.personal .right .findme a img {
+  cursor: pointer;
+  width: 50px;
+}
+
+body {
+  position: relative;
+}
+/* Footer */
+.footer {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  background: #ddd;
+  bottom: 0px;
+}
+
+@media screen and (max-width: 800px) {
+  .left,
+  .right {
+    width: 100%;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  nav .left-side .right-side a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/*Blog Style*/
+.blog-container {
+  transition: all 0.7s linear;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+.blog-container h2 {
+  font-weight: lighter;
+  margin-top: 100px;
+  transition: all 0.7s linear;
+}
+
+.goback a[type="button"] {
+  width: 20%;
+  font-size: 15px;
+  background-color: #009ba0;
+  color: white;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.goback a[type="button"]:hover {
+  background-color: #007b80;
+}
+/*index.hbs style end*/
+
+/*add-blog style start*/
+.navbar {
+  height: 9vh;
+}
+.bg-green {
+  background-color: rgb(0, 131, 131) !important;
+} /*fungsi !important=memaksa/memprioritaskan style dripada style defaultnya boostrap*/
+
+.container-fluid {
+  height: 93vh;
+}
+
+.container-form {
+  width: 400px;
+}
+/*add-blog style end*/

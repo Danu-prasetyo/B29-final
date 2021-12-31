@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danupras Web Application</title>
+    <link rel="stylesheet" href="public/style.css" />
+    <link rel="icon" href="public/img/navlogo.png" alt="logo" />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav>
+      <div class="left-side">
+        <a href="/">
+          <img src="public/img/navlogo.png" alt="logo" />
+        </a>
+        <ul>
+          <li>
+            <a href="/" class="list-active">Home</a>
+          </li>
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+          <li>
+            <a href="/login">Login</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right-side">
+        <!--<button href="contact-form.html" type="submit" value="Contact me">Contact me</button>-->
+        <a href="/contact" type="button"> Contact Me </a>
+      </div>
+    </nav>
+
+    <!-- Card -->
+    <div class="personal">
+      <div class="left">
+        <div class="card">
+          <div class="image">
+            <img src="public/img/danu.jpg" alt="Photo Profile" />
+          </div>
+          <div class="header">
+            <h1>Danu Prasetyo</h1>
+          </div>
+          <div class="content">
+            <p>I became a superstar to make awesome app and software to bring new life for mankind.<br /></p>
+            <p>
+              Email : Example@gmail.com<br />
+              Address : Bogor
+            </p>
+
+            <table class="table" border="1">
+              <tr>
+                <th>Portofolio Project</th>
+                <th>Year</th>
+                <th>Link</th>
+              </tr>
+              <tr>
+                <td>Dumbways Web App</td>
+                <td>2021</td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td>Personal Web App</td>
+                <td>2021</td>
+                <td>
+                  <a href="https://danuchama.netlify.app/" target="_blank">
+                    <img src="public/img/link_icon.png" alt="link" width="25px" height="25px" />
+                  </a>
+                </td>
+              </tr>
+              {{#each table}}
+                <tr>
+                  <td>{{this.project}}</td>
+                  <td>{{this.year}}</td>
+                  <td>{{this.link}}</td>
+                </tr>
+              {{/each}}
+            </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div>
+          <h1>About Me</h1>
+          <hr />
+          <h3>Junior Web Developer</h3>
+          <hr />
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
+          <span class="skill">
+            <span>
+              <img src="https://www.freepnglogos.com/uploads/javascript-png/javascript-vector-logo-yellow-png-transparent-javascript-vector-12.png" alt="" />
+              <h3>Front End Developer</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, temporibus.</p>
+            </span>
+            <span>
+              <img src="public/img/nodejs.png" alt="" />
+              <h3>Back End Developer</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, temporibus.</p>
+            </span>
+          </span>
+          <h1>Find Me On</h1>
+          <span class="findme">
+            <a href="mailto:example@gmail.com" target="_blank">
+              <img
+                src="data:image/png;base64,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"
+                alt="gmail"
+              />
+            </a>
+            <a href="https://wa.me/082295425297" target="_blank">
+              <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1.png" alt="whatsapp" />
+            </a>
+            <a href="https://www.instagram.com/_danugans_/" target="_blank">
+              <img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png" alt="" />
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer class="footer">Copyright @2021 | Danu Prasetyo</footer>
+</html>

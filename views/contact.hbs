@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danupras - Contact Me</title>
+    <link rel="icon" href="public/img/navlogo.png" alt="logo" />
+    <link rel="stylesheet" href="public/contact-form.css" />
+    <script rel="javascript" src="form.js"></script>
+    <script type = "text/javascript" >
+      window.onbeforeunload = function() { 
+        return "Apakah anda yakin ingin meninggalkan halaman ini?"; 
+      }; //fungsi untuk menampilkan notifikasi jika ingin meninggalkan laman
+      </script>
+</head>
+<body>
+    <!-- NavBar -->
+    <nav>
+        <div class="left-side">
+          <a href="/">
+            <img src="public/img/navlogo.png" alt="logo" />
+          </a>
+          <ul>
+            <li>
+              <a href="/" class="list-active">Home</a>
+            </li>
+            <li>
+              <a href="/blog">Blog</a>
+            </li>
+            <li>
+            <a href="/login">Login</a>
+          </li>
+          </ul>
+        </div>
+        <div class="right-side">
+            <!--<button href="contact-form.html" type="submit" value="Contact me">Contact me</button>-->
+          <a href="/contact" type="button"> Contact Me </a>
+        </div>
+      </nav>
+
+      <!-- Form -->
+      <center>
+        <div class="image">
+          <img src="public/img/navlogo.png" alt="logo" width="200px" height="200px" />
+        </div>
+      </center>
+    
+      
+    <div class="container">
+        <form method="post">
+    <label for="name">Name</label>
+        <input type="text" placeholder="Masukkan Nama" id="name"><br>
+    <label for="email">Email</label>
+        <input type="text" placeholder="Masukkan Email" id="email"><br>
+    <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+            <option>Unidentified</option>
+            <option>Laki-laki</option>
+            <option>Perempuan</option>
+        </select><br>
+        <label for="subject">Subject</label>
+        <input type="text" placeholder="Masukkan Subjek Pesan" id="subject"><br>
+    <label for="description">Message</label><br>
+        <textarea id="description" rows="5" cols="40"></textarea><br>
+        <input type="checkbox" id="checkbox">
+        <label>Saya mengerti dan menyetujui syarat & ketentuan</label><br><br>
+    <!--<input href="mailto:example@gmail.com" type="submit" value="Send">-->
+    <div class="send-email">
+      <!--<a type="submit" onclick="submitData()">Send</a>-->
+      <button type="button" onclick="submitData()">Send</button>
+    </div>
+    
+    
+</div>
+</form>
+<footer>Copyright @2021 | Danu Prasetyo</footer>
+</body>
+</html>
+<!--perbedaan div dan span
+div = elemen block-line,konten akan memuat konten dari kiri ke kanan
+span= elemen in-line, konten akan dimuat menyesuaikan ukuran konten/itemnyanya-->

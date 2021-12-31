@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  background: #f4f3f3;
+  height: 60px;
+  top: 0; /*top: 0; berfungsi agar navigasi menempati posisi paling atas.*/
+  position: fixed; /*position: fixed; berfungsi agar navigasi tetap di atas saat di scroll ke bawah.*/
+  width: 100%; /*width: 100%; berfungsi agar menu navigasinya memiliki lebar sepenuh di layar aplikasi browser.*/
+  z-index: 1; /*z-index: 1; berfungsi seperti layer di Photoshop, biar layer navigasi menempati posisi lapisan paling atas.*/
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
+}
+
+nav .left-side img {
+  height: 75px;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  flex: 50%;
+}
+
+nav div.left-side {
+  padding-left: 50px;
+}
+
+nav div.right-side {
+  padding-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-left: 40px;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 40px;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+nav ul li a.list-active {
+  color: #009ba0;
+  font-weight: 700;
+}
+
+/* a */
+nav .right-side a {
+  font-size: 15px;
+  padding: 8px 20px;
+  background-color: #009ba0;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+nav .right-side a[type="button"]:hover {
+  background-color: #007b80;
+}
+
+/*button*/
+nav .right-side button[type="button"] {
+  width: 20%;
+  font-size: 15px;
+  background-color: #009ba0;
+  color: white;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+nav .right-side button[type="button"]:hover {
+  background-color: #007b80;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Right column */
+.blog-form {
+  margin-top: 50px;
+  float: left;
+  width: 25%;
+  padding: 15px;
+  transition: all 0.7s linear;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.search {
+  width: 100%;
+  font-size: 15px;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+}
+
+.blog-form .btn-add {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  align-items: center;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 4px;
+  background: #009ba0;
+  color: #fff;
+}
+.blog-form .form-container {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+}
+
+.blog-form form input,
+textarea,
+select {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+}
+
+.blog-form h1 {
+  text-align: center;
+}
+
+.blog-form form textarea {
+  height: 150px;
+}
+
+.blog-form form .input-blog-image-group {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.blog-form form .input-blog-image-group label p {
+  font-size: 15px;
+}
+
+.blog-form form .input-blog-image-group label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog-form form .button-group {
+  text-align: right;
+}
+
+.blog-form form button {
+  margin-top: 20px;
+  padding: 8px 20px;
+  font-size: 17px;
+  background: #009ba0;
+  border-radius: 8px;
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.blog-form form button[type="submit"]:hover {
+  background-color: #007b80;
+}
+
+/* Fake image */
+.blog-form .fakeimg {
+  background-color: rgb(184, 184, 184);
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  height: 250px;
+}
+.blog-form .fakeimg p {
+  text-align: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+/* Add a card effect for articles */
+/* Left column */
+.blog-list {
+  float: left;
+  width: 75%;
+  padding: 15px;
+  margin-top: 50px;
+  transition: all 0.7s linear;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+.blog-list .blog-list-item {
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  display: flex;
+}
+
+.blog .blog-list .blog-image {
+  flex: 1;
+}
+
+.blog .blog-list .blog-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.blog .blog-list .blog-content {
+  padding-left: 20px;
+  flex: 2;
+}
+
+.blog .blog-list .btn-group {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.blog .blog-list .btn-group .btn-edit {
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 4px;
+  color: #000000;
+  background: #dbdbdb;
+}
+
+.blog .blog-list .btn-group .btn-delete {
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 4px;
+  background: #009ba0;
+  color: #fff;
+}
+
+.blog .blog-list h1 a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.blog .blog-list .detail-blog-content {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.blog .blog-list .blog-list-item p {
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+/* Clear floats after the columns */
+.blog:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  position: relative;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  background: #ddd;
+  bottom: 0px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .blog-list,
+  .blog-form {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  nav .left-side .right-side a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Blog Detail */
+.blog-detail {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-detail-container {
+  width: 80%;
+  margin: 40px 0;
+}
+
+.blog-detail-container img {
+  width: 100%;
+}
+
+.blog-detail-container h1 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 120%;
+  margin-bottom: 15px;
+}
+
+.blog-detail-container .author {
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.blog-detail-container p {
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: justify;
+}
