@@ -75,7 +75,8 @@ app.get("/blog", function (req, res) {
     client.query(query, function (err, result) {
       done();
       let data = result.rows;
-
+      console.log(data);
+      //let post_test = new Date();
       data = data.map(function (blog) {
         return {
           ...blog,
@@ -85,7 +86,7 @@ app.get("/blog", function (req, res) {
           image: "/uploads/" + blog.image,
         };
       });
-      //console.log(data);
+
       res.render("blog", {
         isLogin: req.session.isLogin,
         blogs: data,
